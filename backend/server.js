@@ -22,6 +22,8 @@ app.use("/api/students", studentRoutes);
 app.use("/api/documents", documentRoutes);
 app.use("/api/auth", authRoutes);
 
-app.listen(5000, () => {
-    console.log("TrustChain server running on port 5000");
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`TrustChain server running on port ${PORT}`);
 });
