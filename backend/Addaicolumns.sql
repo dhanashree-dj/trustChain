@@ -1,0 +1,2 @@
+ALTER TABLE documents ADD COLUMN IF NOT EXISTS extracted_text TEXT;
+ALTER TABLE documents ADD COLUMN IF NOT EXISTS ai_status VARCHAR(50) DEFAULT 'Unchecked';

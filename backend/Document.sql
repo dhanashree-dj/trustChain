@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS documents (
+  id SERIAL PRIMARY KEY,
+  student_id INTEGER NOT NULL REFERENCES students(id) ON DELETE CASCADE,
+  title VARCHAR(255) NOT NULL,
+  filename VARCHAR(255) NOT NULL,
+  filepath VARCHAR(500) NOT NULL,
+  status VARCHAR(50) DEFAULT 'Pending',
+  uploaded_at TIMESTAMP DEFAULT NOW()
+  
+);

@@ -1,0 +1,2 @@
+ALTER TABLE documents ADD COLUMN IF NOT EXISTS blockchain_tx_hash VARCHAR(100);
+ALTER TABLE documents ADD COLUMN IF NOT EXISTS on_chain BOOLEAN DEFAULT false;
